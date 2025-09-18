@@ -21,3 +21,11 @@ jobs:
 
       - name: Linux is my main os
         run: echo "my os is linxu"
+
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+
+      - name: List the files of the repo
+        run: |
+          echo "The repository ${{ github.repository }} contains the following files:"
+          tree
