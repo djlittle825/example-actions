@@ -10,4 +10,4 @@ jobs:
       - name: Display warning and error 
         run: |
           echo "::warning::Warning message"
-          echop "::error::Error message"
+          echo "::error::Error message"
