@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       text:
-        description: Label of a test field
+        description: Label of a text field
         required: true
       build:
         description: build type
         type: choice
         default: release
-        options: [degub, release]
+        options: [debug, release]
 
 jobs:
   build:
