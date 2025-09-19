@@ -1,0 +1,22 @@
+name: Manual trigger
+
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        description: Label of a test field
+        required: true
+      build:
+        description: build type
+        type: choice
+        default: release
+        options: [degub, release]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display the inputs
+        run: |
+          echo "Label: ${{ input.text }}"
+          echo "Build: ${{ input.build }}"
