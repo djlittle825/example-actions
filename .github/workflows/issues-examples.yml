@@ -2,6 +2,7 @@ name: issues examples
 
 on: 
   issues:
+    types:
     - opened
 
 
